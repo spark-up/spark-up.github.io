@@ -9,7 +9,7 @@ information on heterodyne
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Table of Contents:
 
    pages/background
