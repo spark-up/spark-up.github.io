@@ -14,7 +14,7 @@ information on heterodyne
 
    pages/background
    pages/documentation
-   pages/experimentation
+   pages/experiments
    pages/results
    pages/information
 
