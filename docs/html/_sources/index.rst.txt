@@ -4,11 +4,14 @@
    contain the root `toctree` directive.
 
 Welcome to heterodyne documentation!
-==================================
+====================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   install
+   support
 
 
 
@@ -17,6 +20,10 @@ Indices and tables
 
 * :ref:`Introduction`
 * :ref:`Setup and Installation`
+* :ref:`Methods Used`
+* :ref:`Experimentation`
+* :ref:`Results`
+* :ref:`Conclusion`
 * :ref:`search`
 
 
@@ -45,10 +52,5 @@ External Links
 --------------
 
 For more information refer
-`here<www.python.org>`
-
-
-.. py:function:: square(x)
-
-   return the square of a function
+`here<www.temp.org>`
    
