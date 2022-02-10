@@ -9,12 +9,13 @@ Welcome to heterodyne documentation!
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents:
+
    pages/information
 
 
 
-Indices and tables
-==================
+Indices and V2
+==============
 
 * :ref:`search`
 

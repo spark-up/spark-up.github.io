@@ -1,4 +1,4 @@
-Authors
+authors
 =======
 
 Eric and Andrew

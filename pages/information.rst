@@ -1,6 +1,9 @@
 Information
 ===========
 
+
 .. toctree::
    :maxdepth: 1
-   pages/authors
+   :caption: Table of Contents:
+
+   authors

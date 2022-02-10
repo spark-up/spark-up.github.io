@@ -1,6 +1,5 @@
 Information
 ===========
 
-.. toctree::
-   :maxdepth: 1
-   authors
+
+Eric and Andrew
