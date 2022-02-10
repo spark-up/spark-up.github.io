@@ -1,5 +1,4 @@
-Eric Manirasith
+Authors
 ===============
 
-Andrew Zhou
-===========
+Eric and Andrew

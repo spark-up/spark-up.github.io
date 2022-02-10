@@ -9,7 +9,6 @@ Welcome to heterodyne documentation!
 .. toctree::
    :maxdepth: 3
    :caption: Table of Contents:
-   
    background
    information
 
@@ -18,12 +17,6 @@ Welcome to heterodyne documentation!
 Indices and tables
 ==================
 
-* :ref:`Introduction`
-* :ref:`Setup and Installation`
-* :ref:`Methods Used`
-* :ref:`Experimentation`
-* :ref:`Results`
-* :ref:`Conclusion`
 * :ref:`search`
 
 
