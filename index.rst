@@ -6,36 +6,9 @@
 heterodyne!
 ===========
 
-Introduction
-------------
-
-Background
-----------
-
-Methods
--------
-
-Task
-****
-
-MapReduce
-*********
-
-Experiments
-***********
-
-Results
--------
-
-Conclusion
-----------
-
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices and tables
@@ -44,3 +17,26 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Introduction
+============
+This is an introduction.
+
+
+Setup and Installation
+======================
+
+Install using ...
+-----------------
+This is a sub heading to install using pip
+
+.. code-block:: python
+
+   pip install library
+
+
+.. note::
+
+   This is a note. Add your note here
+
+
