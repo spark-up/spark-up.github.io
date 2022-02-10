@@ -7,10 +7,9 @@ Welcome to heterodyne documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of Contents:
-   background
-   information
+   pages/information
 
 
 

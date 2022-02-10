@@ -3,4 +3,4 @@ Information
 
 .. toctree::
    :maxdepth: 1
-   authors
+   pages/authors

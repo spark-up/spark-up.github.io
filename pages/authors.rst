@@ -1,4 +1,4 @@
 Authors
-===============
+=======
 
 Eric and Andrew
