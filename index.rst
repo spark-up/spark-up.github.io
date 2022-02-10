@@ -7,11 +7,11 @@ Welcome to heterodyne documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
+   :caption: Table of Contents:
    
-   install
-   support
+   background
+   information
 
 
 
