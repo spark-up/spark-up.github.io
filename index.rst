@@ -3,43 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to heterodyne documentation!
-====================================
+heterodyne!
+===========
+information on heterodyne
+
 
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents:
 
+   pages/background
+   pages/documentation
    pages/information
 
-
-
-Indices and V2
-==============
-
-* :ref:`search`
-
-
-Introduction
-============
-
-This is an introduction to my sdk.
-
-Setup and Installation
-======================
-
-Install using pip
------------------
-This is a sub heading to install using pip
-
-.. code-block:: python
-
-   pip install library
-
-
-.. note::
-
-   This is a note. Add your note here
 
 External Links
 --------------
