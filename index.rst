@@ -3,30 +3,32 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-heterodyne!
-===========
+Welcome to heterodyne documentation!
+==================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
 
+
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
+* :ref:`Introduction`
+* :ref:`Setup and Installation`
 * :ref:`search`
+
 
 Introduction
 ============
-This is an introduction.
 
+This is an introduction to my sdk.
 
 Setup and Installation
 ======================
 
-Install using ...
+Install using pip
 -----------------
 This is a sub heading to install using pip
 
@@ -39,4 +41,14 @@ This is a sub heading to install using pip
 
    This is a note. Add your note here
 
+External Links
+--------------
 
+For more information refer
+`here<www.python.org>`
+
+
+.. py:function:: square(x)
+
+   return the square of a function
+   
