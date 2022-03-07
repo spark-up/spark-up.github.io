@@ -6,3 +6,4 @@ Documentation
    :titlesonly:
 
    document/pyspark
+   document/cluster
