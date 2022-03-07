@@ -7,12 +7,12 @@ heterodyne!
 ===========
 The rise of AutoML has led to almost anyone being able to perform basic ML tasks.
 AutoML is very successful in data transformations, feature engineering, model building, and hyperparameter tuning.
-However, one step in the workflow has received significantly less attention if any at all: ML feature type inference.
+However, one step in the workflow has received significantly less attention if any at all: `ML feature type inference`.
 Therefore, the ADA lab at UCSD has created a new way to perform AutoML feature type inference with the ML Data Prep Zoo.
 Using an ML-based approach, standard ML models are built and trained on a labeled benchmark dataset that is able to predict feature types
 from columns with reasonable accuracy. 
 
-Our tool addresses the scalability issues currently affecting Project Sorting Hat using PySpark.
+Heterodyne addresses the scalability issues currently affecting Project Sorting Hat using PySpark.
 
 
 .. toctree::
@@ -21,8 +21,7 @@ Our tool addresses the scalability issues currently affecting Project Sorting Ha
 
    pages/background
    pages/documentation
-   pages/experiments
-   pages/results
+   pages/experiment
    pages/information
 
 
