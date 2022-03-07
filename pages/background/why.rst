@@ -1,7 +1,7 @@
 ML Data Prep Zoo
 ================
 
-.. figure:: images/label_vocab.png
+.. figure:: images/nine_vocab.png
    :scale: 100 %
 
    Full 9-class vocabulary used for feature type inference. (Recreation of Table 6 from Shah et al.)
