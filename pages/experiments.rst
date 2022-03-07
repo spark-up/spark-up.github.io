@@ -1,5 +1,5 @@
-Experiments
-===========
+Scalability Experiment
+======================
 
 .. toctree::
    :maxdepth: 1
