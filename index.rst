@@ -31,5 +31,5 @@ External Links
 --------------
 
 For more information refer
-`here<www.temp.org>`
+`https://adalabucsd.github.io/sortinghat.html`
    
