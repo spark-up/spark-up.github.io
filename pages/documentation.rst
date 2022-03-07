@@ -5,4 +5,4 @@ Documentation
    :maxdepth: 1
    :titlesonly:
 
-   pyspark
+   document/pyspark

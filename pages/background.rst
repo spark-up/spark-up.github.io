@@ -6,7 +6,7 @@ Background
    :maxdepth: 1
    :titlesonly:
 
-   why
+   background/why
 
 
 

@@ -5,4 +5,8 @@ Information
 .. toctree::
    :maxdepth: 1
 
-   authors
+   info/authors
+   info/contributing
+   info/citing
+   info/license
+   info/acknowledg

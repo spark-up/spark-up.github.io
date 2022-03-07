@@ -21,7 +21,7 @@ Heterodyne addresses the scalability issues currently affecting Project Sorting 
 
    pages/background
    pages/documentation
-   pages/experiment
+   pages/experiments
    pages/information
 
 

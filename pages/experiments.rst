@@ -5,4 +5,4 @@ Experiments
    :maxdepth: 1
    :titlesonly:
 
-   results
+   experiment/results
