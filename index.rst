@@ -5,7 +5,10 @@
 
 heterodyne!
 ===========
-information on heterodyne
+The rise of AutoML has led to almost anyone being able to perform basic ML tasks.
+AutoML is very successful in data transformations, feature engineering, model building, and hyperparameter tuning.
+However, one step in the workflow has received significantly less attention if any at all: ML feature type inference.
+Therefore, the ADA lab at UCSD has created 
 
 
 .. toctree::
