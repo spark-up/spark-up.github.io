@@ -24,7 +24,7 @@ Our tool addresses the scalability issues currently affecting Project Sorting Ha
    pages/experiments
    pages/results
    pages/information
-
+   pages/why
 
 
 External Links
