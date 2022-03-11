@@ -115,16 +115,14 @@
 <li class="toctree-l2"><a class="reference internal" href="basefeaturize.html">Base Featurization</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../documentation.html">Scaling Base Featurization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../document/pyspark.html">PySpark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../document/cluster.html">Cluster</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation.html">Scaling Base Featurization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../experiments.html">Scalability Experiment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../experiment/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../experiment/cluster.html">Cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiment/results.html">Results</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../information.html">Information</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../info/authors.html">Authors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../info/contributing.html">Contributing</a></li>
@@ -157,7 +155,7 @@ first step (<em>Base Featurization</em>) is to take the raw csv and extract spec
 these extracted features are then used to train ML models to infer feature types from columns.
 Finally, the trained ML model is used to infer feature types on an “unseen” csv.</p>
 <p><strong>Base Featurization</strong></p>
-<p>The first step or Base Featurization takes on average the longest amount of time during
+<p><em>Base Featurization</em> takes on average the longest amount of time during
 AutoML feature type inference and the whole workflow is bottlenecked at this step.
 This is because Base Featurization is the only step in the workflow that iterates through
 the whole dataframe including every row and column. Therefore, Base Featurization has a

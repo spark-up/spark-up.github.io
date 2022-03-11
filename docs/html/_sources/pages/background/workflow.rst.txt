@@ -14,7 +14,7 @@ Finally, the trained ML model is used to infer feature types on an "unseen" csv.
 
 **Base Featurization**
 
-The first step or Base Featurization takes on average the longest amount of time during 
+*Base Featurization* takes on average the longest amount of time during 
 AutoML feature type inference and the whole workflow is bottlenecked at this step. 
 This is because Base Featurization is the only step in the workflow that iterates through 
 the whole dataframe including every row and column. Therefore, Base Featurization has a 
