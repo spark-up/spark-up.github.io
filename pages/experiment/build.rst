@@ -16,9 +16,9 @@ doubled the rows of the input csv after each timed run until we reached
 >100 gbs of data (Table 1).
 
 .. figure:: images/membercsv.png
-   :scale: 80 %
+   :scale: 50 %
 
-   **member.csv***
+   **member.csv**
 
 To make sure we only time the function itself Spark.checkpoint directory 
 is used to save the different csv sizes to memory. Also, it is made sure 
