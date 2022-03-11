@@ -6,9 +6,9 @@ Background
    :maxdepth: 1
    :titlesonly:
 
-   background/sortingHat
+   background/sorting-hat
    background/workflow
-   background/basefeaturize
+   background/base-featurization
 
 
 
