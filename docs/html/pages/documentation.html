@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PySpark" href="document/pyspark.html" />
+    <link rel="next" title="Scalability Experiment" href="experiments.html" />
     <link rel="prev" title="Base Featurization" href="background/basefeaturize.html" /> 
 
 </head>
@@ -113,16 +113,14 @@
 <li class="toctree-l2"><a class="reference internal" href="background/basefeaturize.html">Base Featurization</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Scaling Base Featurization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="document/pyspark.html">PySpark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="document/cluster.html">Cluster</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scaling Base Featurization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Scalability Experiment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="experiment/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment/cluster.html">Cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="experiment/results.html">Results</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="information.html">Information</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="info/authors.html">Authors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="info/contributing.html">Contributing</a></li>
@@ -143,12 +141,26 @@
                             
   <section id="scaling-base-featurization">
 <h1>Scaling Base Featurization<a class="headerlink" href="#scaling-base-featurization" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="document/pyspark.html">PySpark</a></li>
-<li class="toctree-l1"><a class="reference internal" href="document/cluster.html">Cluster</a></li>
-</ul>
-</div>
+<p><strong>PySpark</strong></p>
+<p>To scale AutoML feature type inference, we reimplement the ML Data Prep Zoo’s <em>Base
+Featurization</em> algorithm in PySpark. Like the Python code, we assume that
+the input PySpark DataFrame is read with initial datatype inference. In
+Pandas, this is done by default; in PySpark, the inferSchema argument of
+DataFrameReader.csv() must be set to true. Unfortunately, the PySpark
+DataFrame’s data model does not support efficient sampling, as operations
+crossing the Python/JVM barrier incur significant overhead. As such, we
+step down to the lower level RDD abstraction, which allows for mapping
+across partitions, reducing this overhead from 𝑂(𝑁𝑀)to 𝑂(𝑀), where 𝑁
+and 𝑀 are respectively the number of rows per partition and the number
+of partitions.</p>
+<p><strong>Implementation</strong></p>
+<p>With our implementation we perform two full scans of the
+dataframe. The first scan acquires all the descriptive statistics
+(figure 2). For the descriptive statistics we use a dictionary to loop through
+𝑝𝑦𝑠𝑝𝑎𝑟𝑘.𝑠𝑞𝑙.𝑓𝑢𝑛𝑐𝑡𝑖𝑜𝑛𝑠 and extract the statistics needed all while iterating through
+the entire dataset. The second scan obtains the 5 sample values. This scan will
+iterate through the dataset and obtain 5 distinct values non-deterministically.
+If the column has less than 5 distinct values then the first n(n&lt;5) values are chosen.</p>
 </section>
 
 

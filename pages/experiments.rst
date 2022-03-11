@@ -6,4 +6,5 @@ Scalability Experiment
    :titlesonly:
 
    experiment/build
+   experiment/cluster
    experiment/results
