@@ -115,16 +115,14 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Base Featurization</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../documentation.html">Scaling Base Featurization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../document/pyspark.html">PySpark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../document/cluster.html">Cluster</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation.html">Scaling Base Featurization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../experiments.html">Scalability Experiment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../experiment/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../experiment/cluster.html">Cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiment/results.html">Results</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../information.html">Information</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../info/authors.html">Authors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../info/contributing.html">Contributing</a></li>
@@ -147,8 +145,8 @@
 <h1>Base Featurization<a class="headerlink" href="#base-featurization" title="Permalink to this headline">¶</a></h1>
 <p>The first step, <em>Base Featurization</em> takes the raw csv and extracts specified base features
 needed from the csv. These features include: column name, descriptive statistics (shown below),
-5 sample values. The descriptive statistics include 25 descriptive stats with a total list
-shown below. For the sample values 5 randomly sampled distinct values are chosen from each
+and 5 sample values. The descriptive statistics include 25 descriptive stats with a total list
+shown below. For the sample values 5 randomly sampled values are chosen from each
 column. These extracted features are then used to train ML models to infer feature
 types from columns in a new “unseen” csv file.</p>
 <figure class="align-default" id="id1">
