@@ -7,7 +7,7 @@ AutoML feature type inference Workflow
 
 **Workflow**
 
-The figure above shows the workflow for AutoML feature type inference. As seen above, the 
+The figure above shows the workflow for AutoML feature type inference. The 
 first step (*Base Featurization*) is to take the raw csv and extract specified features. Next,
 these extracted features are then used to train ML models to infer feature types from columns.
 Finally, the trained ML model is used to infer feature types on an "unseen" csv.
