@@ -157,6 +157,12 @@ members from the site. The inital size of the csv is ~1.25 gbs and it
 has ~6 million rows and 14 columns. Therefore, for our experiment we
 doubled the rows of the input csv after each timed run until we reached
 &gt;100 gbs of data (Table 1).</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/membercsv.png"><img alt="../../_images/membercsv.png" src="../../_images/membercsv.png" style="width: 1415.0px; height: 241.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>member.csv*</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>To make sure we only time the function itself Spark.checkpoint directory
 is used to save the different csv sizes to memory. Also, it is made sure
 the same SparkSession is used throughout all runs.</p>

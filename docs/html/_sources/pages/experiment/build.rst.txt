@@ -15,6 +15,11 @@ has ~6 million rows and 14 columns. Therefore, for our experiment we
 doubled the rows of the input csv after each timed run until we reached 
 >100 gbs of data (Table 1).
 
+.. figure:: images/membercsv.png
+   :scale: 100 %
+
+   **member.csv***
+
 To make sure we only time the function itself Spark.checkpoint directory 
 is used to save the different csv sizes to memory. Also, it is made sure 
 the same SparkSession is used throughout all runs. 
