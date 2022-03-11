@@ -10,9 +10,9 @@ types from columns in a new "unseen" csv file.
 .. figure:: images/descriptive_stats.png
    :scale: 100 %
 
-   All the descriptive stats used for *Base Featurization*. (Recreation of Table 6 from Shah et al.)
+   **All the descriptive stats used for *Base Featurization*. (Recreation of Table 6 from Shah et al.)**
 
 .. figure:: images/basefeaturization.png
    :scale: 100 %
 
-   Raw csv after *Base Featurization*
+   **Raw csv after *Base Featurization***
