@@ -6,6 +6,7 @@ scalability. To do this we intend to time our implementation in seconds.
 To test for scalability we will use a range of sizes for the input csv 
 starting around 1 GB then increasing till we reach >100 GB of data. 
 
+**dataset**
 The csv we chose for our experiment was the members.csv. This data was 
 collected from meetup.com API in December 2017 and includes a list of 
 members from the site. The inital size of the csv is ~1.25 gbs and it 
