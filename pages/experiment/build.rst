@@ -16,6 +16,11 @@ doubled (*2x*) the rows of the input csv after each timed run until we reached
 our cluster's capacity (Table 1). Based on our current cluster configuration
 the csv was scaled till it reached ~600 gbs.
 
+.. figure:: images/size.png
+   :scale: 100 %
+
+   **Table 1**
+
 .. figure:: images/membercsv.png
    :scale: 50 %
 
