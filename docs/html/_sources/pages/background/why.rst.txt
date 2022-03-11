@@ -1,12 +1,12 @@
-ML Data Prep Zoo
-================
+Project SortingHat
+==================
+The ADA lab at UCSD has created a new way to automate ML feature type inference using the ML data prep zoo. 
+The ML data prep zoo is a community-led repository that contains a benchmark labelled dataset and pre-trained models for
+ML data prep task. The ML data prep zoo uses an ML-based approach by building and training standard ML models to infer column feature types from an un-seen csv with the 
+benchmark labeled dataset.
 
-.. figure:: images/nine_vocab.png
+
+.. figure:: images/sortingHat.png
    :scale: 100 %
 
-   Full 9-class vocabulary used for feature type inference. (Recreation of Table 6 from Shah et al.)
-
-.. figure:: images/descriptive_stats.png
-   :scale: 100 %
-
-   All the descriptive stats used for base featurization. (Recreation of Table 6 from Shah et al.)
+  

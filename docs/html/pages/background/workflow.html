@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Documentation" href="../documentation.html" />
-    <link rel="prev" title="ML Data Prep Zoo" href="why.html" /> 
+    <link rel="prev" title="Project SortingHat" href="why.html" /> 
 
 </head>
 
@@ -110,7 +110,7 @@
                                 <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../background.html">Background</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="why.html">ML Data Prep Zoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="why.html">Project SortingHat</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">AutoML feature type inference Workflow</a></li>
 </ul>
 </li>
@@ -144,10 +144,19 @@
                             
   <section id="automl-feature-type-inference-workflow">
 <h1>AutoML feature type inference Workflow<a class="headerlink" href="#automl-feature-type-inference-workflow" title="Permalink to this headline">¶</a></h1>
+<p>Figure 1 shows the entire workflow of ML-based feature type inference.
+The first step $Base Featurization$ takes the raw csv and extracts features needed from the csv including descriptive statistics (figure 2) and 5 sample values.
+These extracted features are then used to train ML models to infer feature types from columns in a new “unseen” csv file</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/full_workflow.png"><img alt="../../_images/full_workflow.png" src="../../_images/full_workflow.png" style="width: 665.0px; height: 217.0px;" /></a>
 <figcaption>
 <p><span class="caption-text">Workflow showing how our data is used for ML-based feature type inference. (Recreation of Figure 4 from Shah et al.)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/descriptive_stats.png"><img alt="../../_images/descriptive_stats.png" src="../../_images/descriptive_stats.png" style="width: 308.0px; height: 130.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">All the descriptive stats used for base featurization. (Recreation of Table 6 from Shah et al.)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
