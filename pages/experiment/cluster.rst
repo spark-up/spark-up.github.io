@@ -10,3 +10,5 @@ Logical: 11x Ubuntu 20.04 “Focal” VMs (KVM)
 8 vCPU
 80 GB RAM
 160 GB Disk
+
+Toolkit for quickly configuring single-user Spark Clusters.

@@ -12,6 +12,6 @@ tasks.
 **ML Data Prep Zoo**
 
 Project SortingHat has lead to the creation of the ML Data Prep Zoo. The ML Data Prep Zoo 
-is a repository of benchmark labeled datasets and pre-trained ML models for data preparation 
+is a repository containing benchmark labeled datasets and pre-trained ML models for data preparation 
 tasks. The first data preparation task that was researched was feature type inference.
 
