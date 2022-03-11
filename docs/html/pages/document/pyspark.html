@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Cluster" href="cluster.html" />
-    <link rel="prev" title="Documentation" href="../documentation.html" /> 
+    <link rel="prev" title="Scaling Base Featurization" href="../documentation.html" /> 
 
 </head>
 
@@ -70,7 +70,7 @@
     
       <li><a href="../../index.html">Docs</a></li>
         
-          <li><a href="../documentation.html">Documentation</a></li>
+          <li><a href="../documentation.html">Scaling Base Featurization</a></li>
         
       <li>PySpark</li>
     
@@ -110,11 +110,12 @@
                                 <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../background.html">Background</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../background/why.html">ML Data Prep Zoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../background/sortingHat.html">Project SortingHat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../background/workflow.html">AutoML feature type inference Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../background/basefeaturize.html">Base Featurization</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Scaling Base Featurization</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">PySpark</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cluster.html">Cluster</a></li>
 </ul>
@@ -144,6 +145,17 @@
                             
   <section id="pyspark">
 <h1>PySpark<a class="headerlink" href="#pyspark" title="Permalink to this headline">¶</a></h1>
+<p>To scale the base featurization step, we reimplement the SortingHat base featurization algorithm in PySpark. Like the
+Python code, we assume that the input PySpark DataFrame is read with initial datatype inference. In Pandas, this is
+done by default; in PySpark, the inferSchema argument of DataFrameReader.csv() must be set to true.
+Unfortunately, the PySpark DataFrame’s data model does not support efficient sampling, as operations crossing
+the Python/JVM barrier incur significant overhead. As such, we step down to the lower level RDD abstraction, which
+allows for mapping across partitions, reducing this overhead from 𝑂(𝑁𝑀)to 𝑂(𝑀), where 𝑁 and 𝑀 are respectively
+the number of rows per partition and the number of partitions.
+With our implementation we perform two full scans of the dataframe. The first scan acquires all the descriptive statis-
+tics (figure 2). We use a dictionary to loop through and extract descriptive statistic features using 𝑝𝑦𝑠𝑝𝑎𝑟𝑘.𝑠𝑞𝑙.𝑓𝑢𝑛𝑐𝑡𝑖𝑜𝑛𝑠.
+This is done while simultaneously iterating through the entire dataset. The second scan obtains the 5 sample values.
+This scan will iterate through the dataset and obtain 5 distinct values to use as our sample values.</p>
 </section>
 
 
