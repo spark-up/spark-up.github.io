@@ -5,6 +5,6 @@ Scalability Experiment
    :maxdepth: 1
    :titlesonly:
 
-   experiment/build
-   experiment/cluster
-   experiment/results
+   experiments/build
+   experiments/cluster
+   experiments/results

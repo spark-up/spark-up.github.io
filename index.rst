@@ -22,12 +22,7 @@ As a secondary contribution, we also present a toolkit for quickly configuring s
    :maxdepth: 5
    :caption: Table of Contents:
 
-   pages/background
-   pages/documentation
    pages/experiments
-   pages/conclusion
-   pages/spark-up
-   pages/information
 
 
 External Links
