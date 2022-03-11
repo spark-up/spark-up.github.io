@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Base Featurization" href="basefeaturize.html" />
-    <link rel="prev" title="Project SortingHat" href="why.html" /> 
+    <link rel="prev" title="Project SortingHat" href="sortingHat.html" /> 
 
 </head>
 
@@ -110,7 +110,7 @@
                                 <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../background.html">Background</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="why.html">Project SortingHat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sortingHat.html">Project SortingHat</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">AutoML feature type inference Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basefeaturize.html">Base Featurization</a></li>
 </ul>
@@ -145,9 +145,9 @@
                             
   <section id="automl-feature-type-inference-workflow">
 <h1>AutoML feature type inference Workflow<a class="headerlink" href="#automl-feature-type-inference-workflow" title="Permalink to this headline">¶</a></h1>
-<p>$Base Featurization$ takes on average the longest amount of time during auto feature type inference and as a result the whole workflow is bottle necked at this step.
-This is because $Base Featurization$ is the only step in the workflow that iterates through the whole dataframe including every row and column.
-Therefore, $Base Featurization$ has a time complexity of $O(Row*Column)$, while the actual inference (step 5) itself only has a time complexity of $O(Column)$.</p>
+<p>Base Featurization takes on average the longest amount of time during auto feature type inference and as a result the whole workflow is bottle necked at this step.
+This is because Base Featurization is the only step in the workflow that iterates through the whole dataframe including every row and column.
+Therefore, Base Featurization has a time complexity of O(Row*Column), while the actual inference (step 5) itself only has a time complexity of O(Column).</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/full_workflow.png"><img alt="../../_images/full_workflow.png" src="../../_images/full_workflow.png" style="width: 665.0px; height: 217.0px;" /></a>
 <figcaption>

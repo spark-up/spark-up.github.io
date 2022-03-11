@@ -1,6 +1,6 @@
 Base Featurization
 ==================
-The first step $Base Featurization$ takes the raw csv and extracts features needed from the csv including descriptive statistics (figure 2) and 5 sample values. 
+The first step Base Featurization takes the raw csv and extracts features needed from the csv including descriptive statistics (figure 2) and 5 sample values. 
 These extracted features are then used to train ML models to infer feature types from columns in a new "unseen" csv file 
 
 .. figure:: images/descriptive_stats.png
