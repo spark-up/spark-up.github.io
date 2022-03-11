@@ -18,8 +18,8 @@ of partitions.
 **Implementation**
 
 With our implementation we perform two full scans of the 
-dataframe. The first scan acquires all the descriptive statistics 
-(figure 2). For the descriptive statistics we use a dictionary to loop through
+dataframe. The first scan acquires all the descriptive statistics. 
+For the descriptive statistics we use a dictionary to loop through
 𝑝𝑦𝑠𝑝𝑎𝑟𝑘.𝑠𝑞𝑙.𝑓𝑢𝑛𝑐𝑡𝑖𝑜𝑛𝑠 and extract the statistics needed all while iterating through
 the entire dataset. The second scan obtains the 5 sample values. This scan will 
 iterate through the dataset and obtain 5 distinct values non-deterministically.

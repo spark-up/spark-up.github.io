@@ -123,6 +123,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sparkup.html">Spark-Up</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../information.html">Information</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../info/authors.html">Authors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../info/contributing.html">Contributing</a></li>
@@ -157,7 +158,7 @@ Finally, the trained ML model is used to infer feature types on an “unseen” 
 <p><strong>Base Featurization</strong></p>
 <p><em>Base Featurization</em> takes on average the longest amount of time during
 AutoML feature type inference and the whole workflow is bottlenecked at this step.
-This is because Base Featurization is the only step in the workflow that iterates through
+This is because <em>Base Featurization</em> is the only step in the workflow that iterates through
 the whole dataframe including every row and column. Therefore, Base Featurization has a
 time complexity of <em>O(N*M)</em>, while the actual inference (step 5) only has a
 time complexity of <em>O(M)</em> where <em>𝑁</em> and <em>𝑀</em> are respectively the number of rows and the

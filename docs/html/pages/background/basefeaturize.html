@@ -123,6 +123,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sparkup.html">Spark-Up</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../information.html">Information</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../info/authors.html">Authors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../info/contributing.html">Contributing</a></li>
@@ -143,12 +144,11 @@
                             
   <section id="base-featurization">
 <h1>Base Featurization<a class="headerlink" href="#base-featurization" title="Permalink to this headline">¶</a></h1>
-<p>The first step, <em>Base Featurization</em> takes the raw csv and extracts specified base features
+<p><em>Base Featurization</em> takes the raw csv and extracts specified base features
 needed from the csv. These features include: column name, descriptive statistics (shown below),
 and 5 sample values. The descriptive statistics include 25 descriptive stats with a total list
-shown below. For the sample values 5 randomly sampled values are chosen from each
-column. These extracted features are then used to train ML models to infer feature
-types from columns in a new “unseen” csv file.</p>
+shown below. For the sample values, 5 randomly distinct sampled values are chosen from each
+column.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/descriptive_stats.png"><img alt="../../_images/descriptive_stats.png" src="../../_images/descriptive_stats.png" style="width: 308.0px; height: 130.0px;" /></a>
 <figcaption>
