@@ -1,5 +1,5 @@
-Documentation
-=============
+Scaling Base Featurization
+==========================
 
 .. toctree::
    :maxdepth: 1

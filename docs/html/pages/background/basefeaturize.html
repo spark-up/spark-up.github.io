@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AutoML feature type inference Workflow &mdash; heterodyne 1.0 documentation</title>
+  <title>Base Featurization &mdash; heterodyne 1.0 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Base Featurization" href="basefeaturize.html" />
-    <link rel="prev" title="Project SortingHat" href="why.html" /> 
+    <link rel="next" title="Scaling Base Featurization" href="../documentation.html" />
+    <link rel="prev" title="AutoML feature type inference Workflow" href="workflow.html" /> 
 
 </head>
 
@@ -72,13 +72,13 @@
         
           <li><a href="../background.html">Background</a></li>
         
-      <li>AutoML feature type inference Workflow</li>
+      <li>Base Featurization</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../_sources/pages/background/workflow.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/pages/background/basefeaturize.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -111,8 +111,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../background.html">Background</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="why.html">Project SortingHat</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">AutoML feature type inference Workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basefeaturize.html">Base Featurization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow.html">AutoML feature type inference Workflow</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Base Featurization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation.html">Scaling Base Featurization</a><ul>
@@ -143,15 +143,14 @@
                     <div class="document">
                         
                             
-  <section id="automl-feature-type-inference-workflow">
-<h1>AutoML feature type inference Workflow<a class="headerlink" href="#automl-feature-type-inference-workflow" title="Permalink to this headline">¶</a></h1>
-<p>$Base Featurization$ takes on average the longest amount of time during auto feature type inference and as a result the whole workflow is bottle necked at this step.
-This is because $Base Featurization$ is the only step in the workflow that iterates through the whole dataframe including every row and column.
-Therefore, $Base Featurization$ has a time complexity of $O(Row*Column)$, while the actual inference (step 5) itself only has a time complexity of $O(Column)$.</p>
+  <section id="base-featurization">
+<h1>Base Featurization<a class="headerlink" href="#base-featurization" title="Permalink to this headline">¶</a></h1>
+<p>The first step $Base Featurization$ takes the raw csv and extracts features needed from the csv including descriptive statistics (figure 2) and 5 sample values.
+These extracted features are then used to train ML models to infer feature types from columns in a new “unseen” csv file</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/full_workflow.png"><img alt="../../_images/full_workflow.png" src="../../_images/full_workflow.png" style="width: 665.0px; height: 217.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/descriptive_stats.png"><img alt="../../_images/descriptive_stats.png" src="../../_images/descriptive_stats.png" style="width: 308.0px; height: 130.0px;" /></a>
 <figcaption>
-<p><span class="caption-text">Workflow showing how our data is used for ML-based feature type inference. (Recreation of Figure 4 from Shah et al.)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">All the descriptive stats used for base featurization. (Recreation of Table 6 from Shah et al.)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
