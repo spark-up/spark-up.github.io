@@ -17,5 +17,3 @@ the whole dataframe including every row and column. Therefore, Base Featurizatio
 time complexity of O(Row*Column), while the actual inference (step 5) only has a 
 time complexity of O(Column).  
 
-
-
