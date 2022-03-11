@@ -12,7 +12,7 @@ Therefore, the ADA lab at UCSD has created a new way to perform AutoML feature t
 Using an ML-based approach, standard ML models are built and trained on a labeled benchmark dataset that is able to predict feature types
 from columns with reasonable accuracy. 
 
-Heterodyne addresses the scalability issues currently affecting Project Sorting Hat using PySpark.
+Heterodyne addresses the scalability issues currently affecting the ML Data Prep Zoo using PySpark.
 
 
 .. toctree::
