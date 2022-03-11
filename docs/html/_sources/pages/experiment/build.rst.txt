@@ -16,7 +16,7 @@ doubled the rows of the input csv after each timed run until we reached
 >100 gbs of data (Table 1).
 
 .. figure:: images/membercsv.png
-   :scale: 100 %
+   :scale: 80 %
 
    **member.csv***
 
