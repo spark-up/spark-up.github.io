@@ -7,4 +7,12 @@ assume that the input PySpark DataFrame is read with initial datatype inference.
 In Pandas, this is the default. In PySpark, the `inferSchema` argument of 
 `DataFrameReader.csv()` must be set to `True`.
 
+For our implementation we have divdied the computed features into two 
+parts: "simple" features and "sample" features. Therefore, we do a two 
+full scans of the dataset. The first scan computes the "simple" features 
+by performing simple "aggregates" that are delegated to Spark SQL.
+The second scan takes five distinct values from each column and computes
+features from the sample values.
+
+
 

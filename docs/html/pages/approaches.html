@@ -121,6 +121,13 @@
 <li class="toctree-l2"><a class="reference internal" href="experiment/results.html">Results</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spark-up.html">Spark-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="information.html">Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="info/authors.html">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info/acknowledg.html">Acknowledgements</a></li>
+</ul>
+</li>
 </ul>
 
                             
@@ -138,6 +145,12 @@
 assume that the input PySpark DataFrame is read with initial datatype inference.
 In Pandas, this is the default. In PySpark, the <cite>inferSchema</cite> argument of
 <cite>DataFrameReader.csv()</cite> must be set to <cite>True</cite>.</p>
+<p>For our implementation we have divdied the computed features into two
+parts: “simple” features and “sample” features. Therefore, we do a two
+full scans of the dataset. The first scan computes the “simple” features
+by performing simple “aggregates” that are delegated to Spark SQL.
+The second scan takes five distinct values from each column and computes
+features from the sample values.</p>
 </section>
 
 
