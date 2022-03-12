@@ -9,7 +9,8 @@ Project SortingHat. Project SortingHat envisioned using an ML-based approach to
 automate ML data prepartion. To do this, data preparation tasks are formalized into prediction
 tasks. 
 
-**ML Data Prep Zoo**
+ML Data Prep Zoo
+================
 
 Project SortingHat has lead to the creation of the ML Data Prep Zoo. The ML Data Prep Zoo 
 is a repository containing benchmark labeled datasets and pre-trained ML models for data preparation 
