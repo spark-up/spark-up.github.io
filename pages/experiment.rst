@@ -13,7 +13,6 @@ Due to the in-memory nature of Spark, we find that this task scales nearly linea
 
 .. toctree::
    :maxdepth: 5
-   :caption: Table of Contents:
 
    experiments/dataset
    experiments/cluster
