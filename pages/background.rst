@@ -6,7 +6,7 @@ automated the entire ML pipeline. However, there has been lackluster research do
 automated data preparation.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 5
    :titlesonly:
 
    background/sorting-hat
