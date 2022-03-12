@@ -1,5 +1,10 @@
 Dataset
 =======
+.. figure:: images/membercsv.png
+   :scale: 50 %
+
+   **members.csv**
+
 The csv we chose for our experiment was the members.csv. This data was 
 collected from meetup.com API in December 2017 and includes a list of 
 members from the site. The inital size of the csv is ~1.25 gbs and it 
@@ -9,7 +14,7 @@ our cluster's capacity (Table 1). Based on our current cluster configuration
 the csv was scaled till it reached ~600 gbs.
 
 
-.. figure:: images/membercsv.png
+.. figure:: images/timed_runs.png
    :scale: 50 %
 
    **members.csv**

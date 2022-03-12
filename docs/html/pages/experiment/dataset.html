@@ -29,7 +29,9 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Cluster" href="cluster.html" />
+    <link rel="prev" title="Scalability Experiment" href="../experiment.html" /> 
 
 </head>
 
@@ -68,6 +70,8 @@
     
       <li><a href="../../index.html">Docs</a></li>
         
+          <li><a href="../experiment.html">Scalability Experiment</a></li>
+        
       <li>Dataset</li>
     
     
@@ -104,8 +108,26 @@
                             
                             
                                 <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../experiment.html">Scalability Experiment</a><ul class="simple">
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../background.html">Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../background/sorting-hat.html">Project SortingHat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../background/sorting-hat.html#ml-data-prep-zoo">ML Data Prep Zoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../background/workflow.html">SortingHat Feature Type Inference Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../background/workflow.html#base-featurization">Base Featurization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../approaches.html">Scaling Base Featurization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../experiment.html">Scalability Experiment</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cluster.html">Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html">Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../spark-up.html">Spark-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../information.html">Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../info/authors.html">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info/acknowledg.html">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -120,6 +142,12 @@
                             
   <section id="dataset">
 <h1>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h1>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/membercsv.png"><img alt="../../_images/membercsv.png" src="../../_images/membercsv.png" style="width: 707.5px; height: 120.5px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>members.csv</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The csv we chose for our experiment was the members.csv. This data was
 collected from meetup.com API in December 2017 and includes a list of
 members from the site. The inital size of the csv is ~1.25 gbs and it
@@ -127,10 +155,10 @@ has ~6 million rows and 14 columns. Therefore, for our experiment we
 doubled (<em>2x</em>) the rows of the input csv after each timed run until we reached
 our cluster’s capacity (Table 1). Based on our current cluster configuration
 the csv was scaled till it reached ~600 gbs.</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/membercsv.png"><img alt="../../_images/membercsv.png" src="../../_images/membercsv.png" style="width: 707.5px; height: 120.5px;" /></a>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/timed_runs.png"><img alt="../../_images/timed_runs.png" src="../../_images/timed_runs.png" style="width: 355.0px; height: 221.5px;" /></a>
 <figcaption>
-<p><span class="caption-text"><strong>members.csv</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>members.csv</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>

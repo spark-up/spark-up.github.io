@@ -16,7 +16,7 @@ However, current AutoML systems use simplistic and inaccurate heuristics for fea
 In this paper, we develop a scalable Apache Spark-based proof of concept for effectively scaling feature type inference to terabyte-scale datasets, and present experimental validation of up to ~500GB.
 As a secondary contribution, we also present a toolkit for quickly configuring single-user Spark Clusters.
 
-
+Access to our report, code, and other resources: https://github.com/spark-up/
 
 .. toctree::
    :maxdepth: 15

@@ -142,26 +142,46 @@
                             
   <section id="results">
 <h1>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h1>
-<p>From our results we can see our implementation does indeed scale,
-specifically up to terabyte level.</p>
+<p>Looking at figure 2 and figure 3 we can see that the experiment graphs appear
+relatively linear.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/heterodyneclusterlog.png"><img alt="../../_images/heterodyneclusterlog.png" src="../../_images/heterodyneclusterlog.png" style="width: 554.0px; height: 424.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/heterodyneclusterrelative.png"><img alt="../../_images/heterodyneclusterrelative.png" src="../../_images/heterodyneclusterrelative.png" style="width: 560.0px; height: 430.15px;" /></a>
 <figcaption>
-<p><span class="caption-text"><strong>log</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Figure 2</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../_images/heterodyneclusterrelative.png"><img alt="../../_images/heterodyneclusterrelative.png" src="../../_images/heterodyneclusterrelative.png" style="width: 560.0px; height: 430.15px;" /></a>
-<figcaption>
-<p><span class="caption-text"><strong>relative</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/heterodyneclusterscaling.png"><img alt="../../_images/heterodyneclusterscaling.png" src="../../_images/heterodyneclusterscaling.png" style="width: 560.0px; height: 435.75px;" /></a>
 <figcaption>
-<p><span class="caption-text"><strong>scaling</strong></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Figure 3</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
+<p>Indeed, fitting a linear model between relative size and relative runtime returns
+a slope of <strong>0.0815</strong>. That is for every unit increase in input size, the relative
+runtime increases by approximately 8 percentage points. We also find a Pearson
+correlation coefficient of <strong>0.998972</strong> and <strong>r:sup:`2` = 0.997945</strong>. Thus, we can conclude
+that runtime scales linearly with input size: only neglible amount of variation in
+runtime is unexplained by variation in input size.</p>
+<p>Further inspection of Spark stage and job logs in Figure 4 and Figure 5 reveal that the
+current implementation’s bottleneck lies in <strong>toPandas</strong> calls; this is due to lazy evalutaion.
+That said, the relative distribution of runtimes in Figure 4 indicates that the bottleneck
+actually lies with “Simple” features, with</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/sample_chart.png"><img alt="../../_images/sample_chart.png" src="../../_images/sample_chart.png" style="width: 996.8px; height: 378.7px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 4</strong></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/sample_chart2.png"><img alt="../../_images/sample_chart2.png" src="../../_images/sample_chart2.png" style="width: 1198.3999999999999px; height: 531.3px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5</strong></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Finally, it’s worth noting that these results only appear for in-memory analytics, and likely
+will not scale beyond that data across regime. Large numbers of high cardinality input
+features may cause pathological worst-case behavior. However, we are confident that this
+proof of concept implementation will scale well into the terabytes with sufficient memory.</p>
 </section>
 
 

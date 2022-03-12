@@ -142,15 +142,23 @@
                             
   <section id="cluster">
 <h1>Cluster<a class="headerlink" href="#cluster" title="Permalink to this headline">¶</a></h1>
-<p>We ran these trials on a CloudLab Wisconsin-hosted OpenStack cluster. The configuration included 6 nodes; 1 controller node and 5 host nodes.
-Each node</p>
-<p>6x CloudLab Wisconsin c220g5 nodes
-1x OpenStack Controller
-5x OpenStack Host Nodes
-Logical: 11x Ubuntu 20.04 “Focal” VMs (KVM)
-8 vCPU
-80 GB RAM
-160 GB Disk</p>
+<p>We ran these trials on a CloudLab Wisconsin-hosted OpenStack cluster.
+The configuration is listed below:</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/cluster.png"><img alt="../../_images/cluster.png" src="../../_images/cluster.png" style="width: 248.5px; height: 141.5px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 2</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>For the cluter itself, we used Spark-Up to provision ten worker nodes for Spark and HDFS.
+Each of these worker nodes has 8 virtual CPU cores, 80Gbs of memory, and 500 GBs of disk.
+On each node, we dedicate all CPU cores and 60 GiB of memory to Spark, and approxiatemly
+375 GBs of disk space for HDFS.</p>
+<p>We also provisioned a cluster manager node for the Spark master and HDFS Namenode with 4
+virtual CPU cores, 24 GBs of memory, and 160 Gbs of disk.</p>
+<p>All machines at all layers of this cluter use Ubuntu 20.04 Focal, and thus version 5.4.0
+of the Linux kernel. The experiment itself uses Python 3.10.2, Java 11 (Temurin 11.0.14.1+1),
+Spark and Pyspark 3.2.1, and Hadoop 3.3.1.</p>
 </section>
 
 
