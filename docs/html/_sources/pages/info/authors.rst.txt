@@ -1,4 +1,6 @@
 Authors
 =======
 
-Eric and Andrew
+Eric Manirasith
+
+Andrew Zhou
