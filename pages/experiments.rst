@@ -9,3 +9,12 @@ We do this nine times.
 In this way, we convert a ~1.25 GB dataset with 6 million rows into one with just over 3 *billion* rows.
 
 Due to the in-memory nature of Spark, we find that this task scales nearly linearly with respect to the input data.
+
+
+.. toctree::
+   :maxdepth: 5
+   :caption: Table of Contents:
+
+   experiments/dataset
+   experiments/cluster
+   experiments/results
