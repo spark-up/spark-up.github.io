@@ -6,5 +6,4 @@ Information
    :maxdepth: 1
 
    info/authors
-   info/citing
    info/acknowledg
