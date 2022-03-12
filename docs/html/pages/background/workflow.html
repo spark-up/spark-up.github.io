@@ -30,7 +30,6 @@
   <link rel="stylesheet" href="../../_static/css/theme.min.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Base Featurization" href="base-featurization.html" />
     <link rel="prev" title="Project SortingHat" href="sorting-hat.html" /> 
 
 </head>
@@ -114,7 +113,6 @@
 <li class="toctree-l2"><a class="reference internal" href="sorting-hat.html#ml-data-prep-zoo">ML Data Prep Zoo</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">AutoML feature type inference Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#base-featurization">Base Featurization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base-featurization.html">Base Featurization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../experiment.html">Scalability Experiment</a><ul>
@@ -141,13 +139,10 @@
 <p><span class="caption-text"><strong>Workflow showing how our data is used for ML-based feature type inference. (Recreation of Figure 4 from Shah et al.)</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>The figure above shows the workflow for AutoML feature type inference. The
+<p>The figure above shows the workflow for the SortingHat model of feature type inference. The
 first step (<em>Base Featurization</em>) is to take the raw csv and extract specified features. Next,
 these extracted features are then used to train ML models to infer feature types from columns.
 Finally, the trained ML model is used to infer feature types on an “unseen” csv.</p>
-</section>
-<section id="base-featurization">
-<h1>Base Featurization<a class="headerlink" href="#base-featurization" title="Permalink to this headline">¶</a></h1>
 <p><em>Base Featurization</em> takes on average the longest amount of time during
 AutoML feature type inference and the whole workflow is bottlenecked at this step.
 This is because <em>Base Featurization</em> is the only step in the workflow that iterates through
@@ -155,6 +150,26 @@ the whole dataframe including every row and column. Therefore, Base Featurizatio
 time complexity of <em>O(N*M)</em>, while the actual inference (step 5) only has a
 time complexity of <em>O(M)</em> where <em>𝑁</em> and <em>𝑀</em> are respectively the number of rows and the
 number of columns.</p>
+</section>
+<section id="base-featurization">
+<h1>Base Featurization<a class="headerlink" href="#base-featurization" title="Permalink to this headline">¶</a></h1>
+<p><em>Base Featurization</em> takes the raw csv and extracts specified base features
+needed from the csv. These features include: column name, descriptive statistics (shown below),
+and 5 sample values. The descriptive statistics include 25 descriptive stats with a total list
+shown below. For the sample values, 5 randomly distinct sampled values are chosen from each
+column.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/descriptive_stats.png"><img alt="../../_images/descriptive_stats.png" src="../../_images/descriptive_stats.png" style="width: 308.0px; height: 130.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>All the descriptive stats used for *Base Featurization*. (Recreation of Table 6 from Shah et al.)</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/basefeaturization.png"><img alt="../../_images/basefeaturization.png" src="../../_images/basefeaturization.png" style="width: 351.0px; height: 142.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Raw csv after *Base Featurization*</strong></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </section>
 
 
