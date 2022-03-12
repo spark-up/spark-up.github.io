@@ -19,7 +19,7 @@ As a secondary contribution, we also present a toolkit for quickly configuring s
 
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 15
    :caption: Table of Contents:
 
    pages/background
