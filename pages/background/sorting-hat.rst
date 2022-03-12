@@ -2,7 +2,7 @@ Project SortingHat
 ==================
 
 .. figure:: images/realsortinghat.png
-   :scale: 50 %
+   :scale: 35 %
 
 The ADA lab at UCSD has been researching new ways to perform AutoML data preparation under 
 Project SortingHat. Project SortingHat envisioned using an ML-based approach to 
