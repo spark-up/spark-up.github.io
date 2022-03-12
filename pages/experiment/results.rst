@@ -16,7 +16,7 @@ relatively linear.
 Indeed, fitting a linear model between relative size and relative runtime returns 
 a slope of **0.0815**. That is for every unit increase in input size, the relative 
 runtime increases by approximately 8 percentage points. We also find a Pearson 
-correlation coefficient of **0.998972** and **r\ :sup:`2` = 0.997945**. Thus, we can conclude 
+correlation coefficient of **0.998972** and **r2 = 0.997945**. Thus, we can conclude 
 that runtime scales linearly with input size: only neglible amount of variation in 
 runtime is unexplained by variation in input size.
 

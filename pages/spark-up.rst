@@ -18,7 +18,7 @@ cloud environments should take no more than one or two hours. Finally, the Ansib
 reconfiguration – should it be necessary to use a nonstandard configuration, most relevant downstream parameters are
 exposed as easily-overridable variables. Indeed, this project’s infrastructure uses this capability to create an asymmetrical
 Spark/HDFS manager/worker configuration.
-7
+
 
 Flexible starter kit designed for non-production single-user use.
 
