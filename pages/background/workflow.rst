@@ -21,10 +21,9 @@ number of columns.
 Base Featurization
 ==================
 *Base Featurization* takes the raw csv and extracts specified base features
-needed from the csv. These features include: column name, descriptive statistics (shown below), 
-and 5 sample values. The descriptive statistics include 25 descriptive stats with a total list 
-shown below. For the sample values, 5 randomly distinct sampled values are chosen from each 
-column. 
+needed from the dataset. These features include: column name, 5 randomly-chosen unique sample
+values, and various descriptive statistics. The descriptive statistics include 25 statistics with a total list 
+shown below. 
 
 .. figure:: images/descriptive_stats.png
    :scale: 100 %
