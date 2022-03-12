@@ -4,6 +4,7 @@ Spark-Up is a forthcoming toolkit for rapid deployment of varying Spark cluster
 topologies using platform-agnostic infrastructure as code technologies. 
 
 Spark-Up contains three components: 
+
 * Packer VM image build configuration 
 * Terraform Infrastructure-as-Code definitions
 * Ansible provisioning scripts.

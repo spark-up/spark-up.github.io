@@ -1,6 +1,6 @@
 Results
 =======
-Looking at figure 2 and figure 3 we can see that the experiment graphs appear
+Looking at figure 2 and figure 3 from our results we can see that the experiment graphs appear
 relatively linear. 
 
 .. figure:: images/heterodyneclusterrelative.png
