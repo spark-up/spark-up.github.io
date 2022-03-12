@@ -26,6 +26,7 @@ As a secondary contribution, we also present a toolkit for quickly configuring s
    pages/approaches
    pages/experiment
    pages/conclusion
+   pages/information
 
 
 External Links
