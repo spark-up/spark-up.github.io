@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Build &mdash; heterodyne 1.0 documentation</title>
+  <title>Dataset &mdash; heterodyne 1.0 documentation</title>
   
 
   
@@ -68,13 +68,13 @@
     
       <li><a href="../../index.html">Docs</a></li>
         
-      <li>Build</li>
+      <li>Dataset</li>
     
     
       <li class="breadcrumbs-aside">
         
             
-            <a href="../../_sources/pages/experiment/build.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/pages/experiment/dataset.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -118,14 +118,8 @@
                     <div class="document">
                         
                             
-  <section id="build">
-<h1>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h1>
-<p>After confirming our implementation of PySpark for Base Featurization
-is indeed accurate, we then intend to study the preprocessing time for
-scalability. To do this we intend to time our implementation for a number of runs.
-To test for scalability we will use a range of sizes for the input csv
-starting around 1 GB then increasing till we reached at least &gt;100 GB of data.</p>
-<p><strong>dataset</strong></p>
+  <section id="dataset">
+<h1>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h1>
 <p>The csv we chose for our experiment was the members.csv. This data was
 collected from meetup.com API in December 2017 and includes a list of
 members from the site. The inital size of the csv is ~1.25 gbs and it
@@ -134,19 +128,11 @@ doubled (<em>2x</em>) the rows of the input csv after each timed run until we re
 our cluster’s capacity (Table 1). Based on our current cluster configuration
 the csv was scaled till it reached ~600 gbs.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/size.png"><img alt="../../_images/size.png" src="../../_images/size.png" style="width: 535.0px; height: 139.0px;" /></a>
-<figcaption>
-<p><span class="caption-text"><strong>Table 1</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/membercsv.png"><img alt="../../_images/membercsv.png" src="../../_images/membercsv.png" style="width: 707.5px; height: 120.5px;" /></a>
 <figcaption>
-<p><span class="caption-text"><strong>members.csv</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>members.csv</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>To make sure we only timed the <em>Base Featurization</em> itself all csvs used in the experiment
-were saved to memory first as a parquet. Also, the same <em>SparkSession</em> was used throughout.</p>
 </section>
 
 
