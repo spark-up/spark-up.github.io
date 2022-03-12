@@ -1,5 +1,5 @@
-AutoML feature type inference Workflow
-======================================
+SortingHat Feature Type Inference Workflow
+==========================================
 .. figure:: images/full_workflow.png
    :scale: 100 %
 
