@@ -10,11 +10,11 @@ specifically up to terabyte level.
 
 
 .. figure:: images/heterodyneclusterrelative.png
-   :scale: 50 %
+   :scale: 40 %
 
    **relative**
 
 .. figure:: images/heterodyneclusterscaling.png
-   :scale: 50 %
+   :scale: 40 %
 
    **scaling**
