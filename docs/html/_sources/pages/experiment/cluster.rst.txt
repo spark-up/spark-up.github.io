@@ -6,7 +6,7 @@ The configuration is listed below:
 .. figure:: images/cluster.png
    :scale: 50 %
 
-   **Figure 2**
+   
 
 For the cluter itself, we used Spark-Up to provision ten worker nodes for Spark and HDFS.
 Each of these worker nodes has 8 virtual CPU cores, 80Gbs of memory, and 500 GBs of disk.
